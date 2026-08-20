@@ -10,3 +10,16 @@
 @media(max-width:900px){nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--paper);padding:2rem 4vw;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--ink)}nav.open{display:flex}.menu-button{display:block}.hero{grid-template-columns:1fr;padding-top:8rem}.hero-copy{order:1}.portrait-wrap{order:0;max-width:520px}.section-head{grid-template-columns:50px 1fr}.section-lead{grid-column:2;margin-top:1rem}.research-grid{grid-template-columns:1fr 1fr}.ongoing-list article{grid-template-columns:40px 1fr}.ongoing-list p{grid-column:2}.about-grid{grid-template-columns:1fr}.about-copy{padding-top:0}}
 @media(max-width:620px){.hero{padding-inline:1.2rem}.hero h1{font-size:4.8rem}.section,.contact{padding:6rem 1.2rem}.section-head{grid-template-columns:1fr;margin-bottom:3rem}.section-number{width:42px}.section-head>div,.section-lead{grid-column:1}.section h2{font-size:4rem}.research-grid,.course-grid{grid-template-columns:1fr}.research-card.feature{grid-column:auto}.research-card{min-height:320px}.ongoing-list article{gap:1rem}.publication{grid-template-columns:55px 1fr}.publication>a{grid-column:2}.about-title{grid-template-columns:1fr}.about-title .eyebrow,.about-title h2{grid-column:1}.facts{grid-template-columns:1fr}.contact-bottom{grid-template-columns:1fr}.socials{justify-content:flex-start;flex-wrap:wrap}footer{display:block}.portrait-caption{display:block}.marquee div{animation-duration:18s}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.marquee div{animation:none}.reveal{opacity:1;transform:none;transition:none}}
+
+/* Compact hero portrait and themes-only research layout */
+.hero{min-height:720px;max-width:1280px;padding-top:8rem;grid-template-columns:minmax(0,1fr) 420px;gap:7vw}
+.portrait-wrap{width:100%;max-width:420px;justify-self:end}
+.portrait-frame{padding:.75rem}
+.portrait-frame img{aspect-ratio:3/2;object-fit:cover;object-position:center}
+.profile-links{display:flex;flex-wrap:wrap;gap:.55rem 1rem;margin-top:1.25rem;font-size:.68rem;font-weight:600;text-transform:uppercase;letter-spacing:.07em}
+.profile-links a{border-bottom:1px solid var(--ink)}
+.research-grid{max-width:1120px;grid-template-columns:repeat(2,1fr)}
+.research-card{min-height:340px}
+
+@media(max-width:900px){.hero{grid-template-columns:1fr;min-height:auto}.portrait-wrap{order:0;max-width:380px;justify-self:start}.hero-copy{order:1}}
+@media(max-width:620px){.portrait-wrap{max-width:100%}.research-grid{grid-template-columns:1fr}.research-card{min-height:300px}}
