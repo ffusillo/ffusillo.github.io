@@ -1,17 +1,68 @@
-# Fabrizio Fusillo — Academic Portfolio
+# Fabrizio Fusillo — personal website
 
-A responsive static academic portfolio built from the supplied 2026 CV and professional photograph.
+This version is intentionally simple: plain HTML + CSS + a very small JavaScript file. There is no build system and no framework.
 
-## Preview locally
+## Files you need
 
-Run `python3 -m http.server 8080 --directory site` from the repository root and open `http://localhost:8080`.
+```text
+index.html          Main text and links
+styles.css          Colours, layout and image size
+script.js           Mobile menu + small visual effects
+assets/
+  fabrizio-fusillo.jpg
+```
 
-## Deploy
+**The CV is intentionally not included**, so visitors cannot download it from the website.
 
-The `site` directory can be deployed directly to Netlify, Cloudflare Pages, GitHub Pages, or any static web host. No build step is required.
+## The edits you are most likely to make
 
-## Updating content
+### Change text, publications or links
+Open `index.html`.
 
-- Main content: `index.html`
-- Colors, typography, and layout: `styles.css`
-- Photograph and CV downloads: `assets/`
+Search for comments beginning with:
+
+```html
+<!-- EDIT HERE:
+```
+
+Those comments mark the places intended for manual editing.
+
+### Change the portrait size
+Open `styles.css` and find:
+
+```css
+--portrait-width: 300px;
+```
+
+Examples:
+
+```css
+--portrait-width: 260px;   /* smaller */
+--portrait-width: 340px;   /* larger */
+```
+
+The photograph itself now scales to that width and keeps its natural proportions. It is not forced into a smaller crop box.
+
+### Change colours
+At the very top of `styles.css`, edit the values inside `:root`.
+
+### Add a publication
+In `index.html`, find the `PUBLICATIONS` section. Copy one complete block beginning with:
+
+```html
+<article class="publication reveal">
+```
+
+and ending with:
+
+```html
+</article>
+```
+
+Then change the year, journal, title, authors and link.
+
+## GitHub Pages
+
+Upload these files to the repository used for your GitHub Pages site. Keep `index.html`, `styles.css` and `script.js` in the repository root, and keep the image inside the `assets` folder.
+
+No CV PDF needs to be uploaded.
