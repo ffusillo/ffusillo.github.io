@@ -260,6 +260,11 @@
 </div>
 
 <script>
+  // Open links to other websites in a new tab. No need to edit this.
+  document.querySelectorAll('a[href^="http"]').forEach((a) => {
+    if (a.host !== location.host) { a.target = '_blank'; a.rel = 'noopener'; }
+  });
+
   // Topic tags and filters. No need to edit this, unless you rename a topic.
   const topics = {
     innovation: 'Innovation & knowledge',
