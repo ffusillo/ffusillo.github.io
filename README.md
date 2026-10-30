@@ -1,56 +1,33 @@
-# Fabrizio Fusillo — academic personalò website
+# Fabrizio Fusillo — personal academic website
 
-Simple version of plain HTML + CSS + a very small JavaScript file.
-
-## Files needed
+Plain HTML + CSS, published with GitHub Pages. No JavaScript, no build step:
+open `index.html` in a browser to preview changes before pushing.
 
 ```text
-index.html          Main text and links
-styles.css          Colours, layout and image size
-script.js           Mobile menu + small visual effects
+index.html     All the text and links
+styles.css     Colours, fonts and layout
 assets/
   fabrizio-fusillo.jpg
 ```
 
-## Commented code to ease edits
+## Common edits (all in `index.html`)
 
-### To change text, publications or links
-Open `index.html`.
+**Add a publication.** In the `PUBLICATIONS` section, copy one line starting
+with `<li>` and ending with `</li>`, paste it at the top of the list and change
+the text. Delete the last line so the list keeps the 5 most recent works.
+`<b>...</b>` makes text bold, `<em>...</em>` makes it italic.
 
-Search for comments beginning with:
+**Add or remove a course.** Same as above, in the `TEACHING` section.
 
-```html
-<!-- EDIT HERE:
-```
+**Show a CV link.** Put the PDF in `assets/` as `cv-fusillo.pdf`, then in the
+About section remove the `<!--` and `-->` around the CV line.
 
-Those comments mark the places intended for manual editing.
+**Add a new section** (e.g. Projects or Talks). Copy a whole
+`<section> ... </section>` block, change its `id`, heading and text, and add a
+matching link in the `<nav>` at the top. The colour comes from the class on the
+section: `paper`, `lime`, `white`, `ink` or `coral`.
 
-### Change the portrait size
-Open `styles.css` and find:
+## Other edits (in `styles.css`)
 
-```css
---portrait-width: 300px;
-```
-
-Examples:
-
-```css
---portrait-width: 260px;   /* smaller */
---portrait-width: 340px;   /* larger */
-```
-
-### Change colours
-At the very top of `styles.css`, edit the values inside `:root`.
-
-### Add a publication
-In `index.html`, find the `PUBLICATIONS` section. Copy one complete block beginning with:
-
-```html
-<article class="publication reveal">
-```
-
-and ending with:
-
-```html
-</article>
-```
+- **Colours and fonts:** the values at the top, inside `:root`.
+- **Photo size:** `--photo-width: 260px;`
