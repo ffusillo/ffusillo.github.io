@@ -1,22 +1,22 @@
 /* =========================================================
    FABRIZIO FUSILLO — WEBSITE STYLES
-   Colours, fonts and photo size are set here at the top.
+   Colours, fonts and sizes are set here at the top.
    ========================================================= */
 
 :root {
-  --ink: #102f33;      /* dark green: text and sidebar */
-  --paper: #f4f1e9;    /* beige: page background */
-  --white: #fffdf7;
-  --lime: #d9ee72;     /* research boxes, menu highlight */
-  --coral: #e7745b;    /* accents, photo shadow, DOI buttons */
+  --ink: #102f33;      /* dark green: text, Research band */
+  --paper: #f4f1e9;    /* beige: About and News bands */
+  --white: #fffdf7;    /* off-white: side column, Publications band */
+  --lime: #d9ee72;     /* Teaching band, card titles */
+  --coral: #e7745b;    /* accents, photo frame */
   --muted: #657276;
   --line: rgba(16, 47, 51, 0.18);
 
   --sans: "DM Sans", Arial, sans-serif;
   --serif: "Newsreader", Georgia, serif;
 
-  --photo-size: 150px;
-  --sidebar-width: 320px;
+  --photo-width: 220px;
+  --side-width: 340px;
 }
 
 /* ---------- Page ---------- */
@@ -37,157 +37,160 @@ a:hover { color: var(--coral); }
 
 .layout {
   display: grid;
-  grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
-  min-height: 100vh;
+  grid-template-columns: minmax(0, 1fr) var(--side-width);
+  grid-template-areas: "main side";
 }
+main { grid-area: main; }
+aside { grid-area: side; }
 
-/* ---------- Sidebar ---------- */
+/* ---------- Side column (right) ---------- */
 aside {
   position: sticky;
   top: 0;
   height: 100vh;
   overflow-y: auto;
   padding: 3rem 2.2rem;
-  background: var(--ink);
-  color: rgba(255, 253, 247, 0.75);
+  background: var(--white);
+  border-left: 1px solid var(--ink);
   font-size: 0.85rem;
 }
 
-aside img {
-  width: var(--photo-size);
-  aspect-ratio: 1;
-  object-fit: cover;
-  object-position: 42% 30%;
-  box-shadow: 8px 8px 0 var(--coral);
+.photo {
+  width: var(--photo-width);
+  padding: 0.55rem;
+  background: var(--coral);
+  transform: rotate(1.5deg);
 }
+.photo img { display: block; width: 100%; height: auto; }
 
-aside h1 {
-  margin: 1.8rem 0 0.4rem;
-  font: 600 2rem/1.1 var(--serif);
-  color: var(--white);
-}
+aside h1 { margin: 1.8rem 0 0.3rem; font: 600 2.1rem/1.05 var(--serif); letter-spacing: -0.02em; }
+.position { margin: 0; color: var(--muted); }
 
-.position { margin: 0; }
-.position b { color: var(--white); font-weight: 500; }
-
-aside nav { margin: 2rem 0; border-top: 1px solid rgba(255, 255, 255, 0.15); }
+aside nav { display: flex; flex-direction: column; margin: 2rem 0; }
 
 aside nav a {
-  display: block;
-  padding: 0.55rem 0.8rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-  border-left: 3px solid transparent;
-  color: var(--white);
-  font-size: 0.9rem;
-  font-weight: 500;
+  padding: 0.3rem 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   text-decoration: none;
 }
+aside nav a::before { content: "○ "; color: var(--muted); }
+aside nav a.active { color: var(--coral); }
+aside nav a.active::before { content: "● "; color: var(--coral); }
 
-aside nav a:hover,
-aside nav a.active { border-left-color: var(--lime); color: var(--lime); }
-
+.contact { padding-top: 1.5rem; border-top: 1px solid var(--line); }
 .contact p { margin: 0 0 1rem; }
-.contact a:hover { color: var(--lime); }
-.links { display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; font-weight: 600; color: var(--white); }
+.links { display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; font-weight: 600; }
 
-/* ---------- Main column ---------- */
-main { max-width: 860px; padding: 4rem 5vw 2rem; }
-section { padding-bottom: 3.5rem; }
+/* ---------- Main column: coloured bands ---------- */
+section { padding: 4rem max(5vw, calc((100% - 760px) / 2)); }
 
-.tagline {
-  margin: 0 0 2rem;
-  font: 500 clamp(1.8rem, 3.2vw, 2.6rem)/1.2 var(--serif);
+.paper { background: var(--paper); }
+.white { background: var(--white); }
+.lime  { background: var(--lime); }
+.ink   { background: var(--ink); color: var(--white); }
+.ink a:hover { color: var(--lime); }
+
+.eyebrow,
+.label {
+  margin: 0 0 0.8rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
-.tagline em { color: var(--coral); }
+.eyebrow { color: var(--coral); }
 
-h2 {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 1rem;
-  margin: 0 0 1.5rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--ink);
-  font: 600 1.7rem var(--serif);
-}
-h2 a { font: 600 0.8rem var(--sans); white-space: nowrap; }
+h2 { margin: 0 0 1.5rem; font: 600 clamp(2.2rem, 4vw, 3rem)/1 var(--serif); letter-spacing: -0.03em; }
+h3 { margin: 0 0 0.4rem; font: 500 1.3rem/1.25 var(--serif); }
 
-h3 { margin: 0 0 0.3rem; font: 500 1.2rem/1.3 var(--serif); }
+.lead { margin-top: 0; font: 500 clamp(1.5rem, 2.4vw, 2rem)/1.3 var(--serif); }
 
-/* ---------- Research areas ---------- */
-.themes {
+/* ---------- Research cards ---------- */
+.cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
-  margin: 0 0 1.5rem;
-  padding: 0;
-  list-style: none;
+  margin-top: 2rem;
 }
-.themes li { padding: 1.2rem 1.4rem; background: var(--lime); }
-.themes h3 { font-weight: 600; }
-.themes p { margin: 0; font-size: 0.92rem; }
+.cards div { padding: 1.4rem; border: 1px solid rgba(255, 253, 247, 0.25); }
+.cards h3 { color: var(--lime); }
+.cards p { margin: 0; font-size: 0.92rem; color: rgba(255, 253, 247, 0.75); }
 
-.chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-.chips span {
-  padding: 0.15rem 0.8rem;
-  border: 1px solid var(--ink);
-  border-radius: 999px;
-  font-size: 0.8rem;
-  font-weight: 500;
-}
-
-/* ---------- Lists: publications, teaching, news ---------- */
-/* Each <li> has a small label on the left (<span>) and the text on the right (<div>). */
-.entries { margin: 0; padding: 0; list-style: none; }
-
-.entries li {
+/* ---------- Publications ---------- */
+.pub {
   display: grid;
-  grid-template-columns: 5.5rem minmax(0, 1fr);
-  gap: 1rem;
-  padding: 1.2rem 0;
-  border-bottom: 1px solid var(--line);
+  grid-template-columns: minmax(0, 1fr) 40px;
+  column-gap: 1.5rem;
+  padding: 1.4rem 0;
+  border-top: 1px solid var(--line);
 }
+.pub > * { grid-column: 1; }
+.pub .label { margin-bottom: 0.4rem; }
+.pub > p:last-of-type { margin: 0; color: var(--muted); font-size: 0.9rem; }
+.pub b { color: var(--ink); }
 
-.entries li > span {
-  padding-top: 0.15rem;
-  color: var(--coral);
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-}
-
-.entries p { margin: 0; color: var(--muted); font-size: 0.9rem; }
-.entries b { color: var(--ink); }
-
-/* small DOI / Link button after the journal name */
-.entries h3 + p + p a {
-  display: inline-block;
-  margin-left: 0.5rem;
-  padding: 0 0.45rem;
-  border: 1px solid var(--coral);
-  color: var(--coral);
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
+/* the ↗ square on the right of each publication */
+.pub > a {
+  grid-column: 2;
+  grid-row: 1 / span 3;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  font-size: 1.3rem;
   text-decoration: none;
 }
-.entries h3 + p + p a:hover { background: var(--coral); color: var(--white); }
+.pub > a:hover { background: var(--ink); color: var(--white); }
 
-.news li { padding: 0.9rem 0; }
-.news p { color: var(--ink); font-size: 0.95rem; }
+.button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.1rem;
+  background: var(--ink);
+  color: var(--white);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.button:hover { color: var(--lime); }
 
-footer { padding: 1rem 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.8rem; }
+/* ---------- Teaching ---------- */
+.courses {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--ink);
+  border-left: 1px solid var(--ink);
+}
+.courses div {
+  padding: 1.5rem;
+  border-right: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+.courses p { margin: 0; font-size: 0.88rem; }
+.courses .label { margin-bottom: 0.6rem; font-size: 0.68rem; }
 
-/* ---------- Tablet and phone ---------- */
+h3.sub { margin-top: 2.5rem; font-weight: 600; }
+
+/* ---------- News ---------- */
+.news { margin: 0; padding: 0; list-style: none; }
+.news li { padding: 0.8rem 0; border-top: 1px solid var(--line); }
+.news b { display: inline-block; min-width: 5.5rem; color: var(--coral); font-size: 0.85rem; }
+
+footer { padding: 1.2rem 5vw; background: var(--ink); color: rgba(255, 253, 247, 0.65); font-size: 0.8rem; }
+
+/* ---------- Tablet and phone: side column moves to the top ---------- */
 @media (max-width: 900px) {
-  .layout { grid-template-columns: 1fr; }
+  .layout { grid-template-columns: 1fr; grid-template-areas: "side" "main"; }
 
-  aside { position: static; height: auto; padding: 2rem 16px; }
-  aside nav { display: flex; flex-wrap: wrap; gap: 0 1.2rem; border: 0; margin: 1.5rem 0; }
-  aside nav a { padding: 0.3rem 0; border: 0; }
+  aside { position: static; height: auto; padding: 2rem 16px; border-left: 0; border-bottom: 1px solid var(--ink); }
+  .photo { width: 180px; }
+  aside nav { flex-direction: row; flex-wrap: wrap; gap: 0 1.2rem; margin: 1.5rem 0; }
 
-  main { padding: 2.5rem 16px 1rem; }
-  .themes { grid-template-columns: 1fr; }
-  .entries li { grid-template-columns: 1fr; gap: 0.3rem; }
-  h2 { flex-wrap: wrap; }
+  section { padding: 3rem 16px; }
+  footer { padding: 1rem 16px; }
+  .cards, .courses { grid-template-columns: 1fr; }
 }
