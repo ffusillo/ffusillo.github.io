@@ -1,2 +1,3 @@
 # Private files kept in this folder but never published
 *.docx
+.DS_Store
