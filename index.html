@@ -15,22 +15,27 @@
 <body>
 <div class="layout">
 
-<!-- ================= SIDE COLUMN (right): photo, name, menu, contact ================= -->
+<!-- ================= SIDE COLUMN (right): photo, name, menu, contact =================
+     The same block is in publications.html: if you change something here, change it there too. -->
 <aside>
   <div class="photo"><img src="assets/fabrizio-fusillo.jpg" alt="Portrait of Fabrizio Fusillo"></div>
 
   <h1>Fabrizio Fusillo</h1>
   <p class="position">
     Senior Assistant Professor of Economic Policy<br>
-    <a href="https://www.est.unito.it/do/home.pl">University of Torino</a>
+    <a href="https://www.unito.it">University of Torino</a>
+  </p>
+  <p class="affiliations">
+    Affiliate, <a href="https://www.carloalberto.org/person/fabrizio-fusillo/">Collegio Carlo Alberto</a><br>
+    Fellow, <a href="https://brick.carloalberto.org/">BRICK</a>
   </p>
 
   <nav>
-    <a href="#about">About</a>
-    <a href="#research">Research</a>
-    <a href="#publications">Publications</a>
-    <a href="#teaching">Teaching</a>
-    <a href="#news">News</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#research">Research</a>
+    <a href="index.html#publications">Publications</a>
+    <a href="index.html#teaching">Teaching</a>
+    <a href="index.html#news">News</a>
   </nav>
 
   <div class="contact">
@@ -53,39 +58,57 @@
 <!-- ================= ABOUT ================= -->
 <section id="about" class="paper">
   <p class="eyebrow">Economics of innovation · Network analysis</p>
-  <p class="lead">I am a tenure-track Assistant Professor of Economic Policy at the Department of Economics and Statistics “Cognetti de Martiis”, University of Torino, and a Collegio Carlo Alberto Affiliate.</p>
-  <p>I am a fellow at BRICK, Collegio Carlo Alberto, and a deputy member of the Steering and Scientific Committee of HighEst Lab for Big Data Analytics and Artificial Intelligence.</p>
-  <p>I hold a PhD in Economics from the University of Torino and Collegio Carlo Alberto. I have been a visiting researcher at the EU Joint Research Centre, ESSEC Business School, INGENIO (CSIC-UPV) and University College Dublin.</p>
+  <p class="lead">I am a tenure-track Assistant Professor of Economic Policy at the <a href="https://www.est.unito.it/do/home.pl">Department of Economics and Statistics “Cognetti de Martiis”</a>, <a href="https://www.unito.it">University of Torino</a>, and a <a href="https://www.carloalberto.org">Collegio Carlo Alberto</a> Affiliate.</p>
+  <p>I am a fellow at <a href="https://brick.carloalberto.org/">BRICK</a>, Collegio Carlo Alberto, and a deputy member of the Steering and Scientific Committee of HighEst Lab for Big Data Analytics and Artificial Intelligence.</p>
+  <p>I hold a PhD in Economics from the University of Torino and Collegio Carlo Alberto. I have been a visiting researcher at the <a href="https://joint-research-centre.ec.europa.eu">EU Joint Research Centre</a>, <a href="https://www.essec.edu">ESSEC Business School</a>, <a href="https://www.ingenio.upv.es">INGENIO (CSIC-UPV)</a> and <a href="https://www.ucd.ie">University College Dublin</a>.</p>
 </section>
 
 <!-- ================= RESEARCH ================= -->
+<!-- Each box links to the full publication list filtered by that topic
+     (publications.html#innovation, #green, #geography, #networks). -->
 <section id="research" class="ink">
   <p class="eyebrow">Research</p>
   <h2>What I work on</h2>
   <p>I study the determinants and effects of knowledge, technology and networks on innovation and growth, and how they can help territories and firms navigate the green and digital transitions. My work connects technological knowledge with firms, regions and policy, using patent data, network analysis and spatial methods.</p>
   <div class="cards">
-    <div>
+    <a href="publications.html#innovation">
       <h3>Innovation &amp; knowledge</h3>
       <p>Technological knowledge, innovation dynamics, firm capabilities, and the economic effects of new technologies.</p>
-    </div>
-    <div>
+      <span>Publications →</span>
+    </a>
+    <a href="publications.html#green">
       <h3>Green &amp; circular economy</h3>
       <p>Environmental technologies, circular-economy knowledge, green diversification, and sustainable transitions.</p>
-    </div>
-    <div>
+      <span>Publications →</span>
+    </a>
+    <a href="publications.html#geography">
       <h3>Economic geography</h3>
       <p>Regional development, spatial knowledge flows, technological diversification, and economic resilience.</p>
-    </div>
-    <div>
+      <span>Publications →</span>
+    </a>
+    <a href="publications.html#networks">
       <h3>Network analysis</h3>
       <p>Collaboration networks, embodied knowledge flows, and the green and digital transformation of firms and regions.</p>
-    </div>
+      <span>Publications →</span>
+    </a>
   </div>
+
+  <!-- To update ongoing research: edit, add or remove <li> lines. The text in <span> is the status. -->
+  <h3 class="sub">Ongoing research</h3>
+  <ul class="ongoing">
+    <li><span>R&amp;R</span> Critical raw materials and the direction of innovation: Evidence from US metropolitan areas</li>
+    <li><span>R&amp;R</span> Price shocks, exposure to critical raw materials and innovation</li>
+    <li><span>Submitted</span> Regional science-technology alignment and circular innovation trajectories in Europe</li>
+    <li><span>Submitted</span> R&amp;D grants and the direction of innovation</li>
+    <li><span>In preparation</span> Women, STEM, and entrepreneurship: The role of university climate</li>
+    <li><span>In preparation</span> Collaborative research partnerships and science-based circular bioeconomy knowledge in European regions</li>
+  </ul>
 </section>
 
 <!-- ================= PUBLICATIONS ================= -->
 <!-- To add a publication: copy a whole <article> ... </article> block, paste it at the top
-     and change the text. Delete the last block so the list keeps the 5 most recent. -->
+     and change the text. Delete the last block so the list keeps the 5 most recent.
+     Remember to add it to publications.html too. -->
 <section id="publications" class="white">
   <p class="eyebrow">Publications</p>
   <h2>Recent work</h2>
@@ -125,7 +148,10 @@
     <a href="https://publications.jrc.ec.europa.eu/repository/handle/JRC141261" aria-label="Open publication">↗</a>
   </article>
 
-  <p><a class="button" href="https://scholar.google.com/citations?user=CQ9z-CwAAAAJ&amp;hl=it&amp;oi=ao">All publications on Google Scholar ↗</a></p>
+  <p class="buttons">
+    <a class="button" href="publications.html">Full list of publications →</a>
+    <a class="button outline" href="https://scholar.google.com/citations?user=CQ9z-CwAAAAJ&amp;hl=it&amp;oi=ao">Google Scholar ↗</a>
+  </p>
 </section>
 
 <!-- ================= TEACHING ================= -->
@@ -161,14 +187,15 @@
 </section>
 
 <!-- ================= NEWS ================= -->
-<!-- To add news: copy one <li> ... </li> line, paste it at the top and change the text. -->
+<!-- To add news: copy one <li> ... </li> block, paste it at the top and change the text. -->
 <section id="news" class="paper">
   <p class="eyebrow">News</p>
   <h2>Latest</h2>
   <ul class="news">
-    <li><b>Sep 2026</b> Taught the hands-on session on network analysis with innovation data at the DAISY International Summer School, Taranto. <a href="https://github.com/ffusillo/daisy-networks">Materials</a></li>
-    <li><b>2026</b> Published in <em>Research Policy</em>: <a href="https://doi.org/10.1016/j.respol.2026.105434">Green diversification, global knowledge sourcing and local skill composition</a>.</li>
-    <li><b>2026</b> Published in <em>Economic Geography</em>: <a href="https://doi.org/10.1080/00130095.2025.2577307">Green-tech transition beyond regional borders</a>.</li>
+    <li><b>Nov 2026</b> Next <a href="https://brick.carloalberto.org/seminars/">BRICK seminar in Economics of Innovation</a>: Cristina Rossi (Politecnico di Milano), <em>RRI and Trust in AI: The (Lack of an) Effect of Stakeholder Involvement</em>. 3 November 2026, 12:30, Collegio Carlo Alberto. <a href="https://www.carloalberto.org/events/month/2026-11/">CCA events</a></li>
+    <li><b>Nov 2026</b> Call for papers: <a href="https://sites.google.com/view/wings-workshop">WINGS#2 – Workshop in Economics of INnovation, Geography and Science</a>, Turin, 28–29 January 2027. Keynotes by Antoine Dechezleprêtre (OECD) and Luisa Gagliardi (Bocconi). Extended abstracts due 15 November 2026.</li>
+    <li><b>Sep 2026</b> Hands-on session on network analysis with innovation data at the <a href="https://www.daisy-summerschool.it/">DAISY International Summer School on Data Analytics for Innovation and Sustainability</a>, Taranto. <a href="https://github.com/ffusillo/daisy-networks">Materials on GitHub</a></li>
+    <li><b>2026</b> Published in <em>Research Policy</em>: <a href="https://doi.org/10.1016/j.respol.2026.105434">Green diversification, global knowledge sourcing and local skill composition: Evidence from the US</a>.</li>
   </ul>
 </section>
 
