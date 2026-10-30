@@ -8,112 +8,204 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+<div class="layout">
 
-<header>
-  <a href="#about" class="name">Fabrizio Fusillo</a>
+<!-- ================= SIDEBAR: photo, name, menu, contact ================= -->
+<aside>
+  <img src="assets/fabrizio-fusillo.jpg" alt="Portrait of Fabrizio Fusillo">
+
+  <h1>Fabrizio Fusillo</h1>
+  <p class="position">
+    <b>Senior Assistant Professor of Economic Policy</b><br>
+    <a href="https://www.est.unito.it/do/home.pl">University of Torino</a>
+  </p>
+
   <nav>
+    <a href="#about">About</a>
     <a href="#research">Research</a>
     <a href="#publications">Publications</a>
     <a href="#teaching">Teaching</a>
-    <a href="#contact">Contact</a>
+    <a href="#news">News</a>
   </nav>
-</header>
+
+  <div class="contact">
+    <p><a href="mailto:fabrizio.fusillo@unito.it">fabrizio.fusillo@unito.it</a></p>
+    <p>Department of Economics and Statistics “Cognetti de Martiis”<br>
+       Lungo Dora Siena 100/A<br>
+       10153 Torino, Italy</p>
+    <p class="links">
+      <a href="https://scholar.google.com/citations?user=CQ9z-CwAAAAJ&amp;hl=it&amp;oi=ao">Google Scholar</a>
+      <a href="https://orcid.org/0000-0002-1454-1284">ORCID</a>
+      <a href="https://www.linkedin.com/in/fabrizio-fusillo-4771b8a0/">LinkedIn</a>
+      <!-- To show a CV link: put the PDF in the assets folder and remove the comment marks around the next line -->
+      <!-- <a href="assets/cv-fusillo.pdf">CV</a> -->
+    </p>
+  </div>
+</aside>
 
 <main>
 
-<!-- ============ ABOUT ============ -->
-<section id="about" class="paper">
-  <div class="wrap profile">
-    <img src="assets/fabrizio-fusillo.jpg" alt="Portrait of Fabrizio Fusillo">
-    <div>
-      <h1>Fabrizio Fusillo</h1>
-      <p class="position">
-        Senior Assistant Professor of Economic Policy<br>
-        Department of Economics and Statistics “Cognetti de Martiis”<br>
-        <a href="https://www.est.unito.it/do/home.pl">University of Torino</a>
-      </p>
-      <p class="links">
-        <a href="mailto:fabrizio.fusillo@unito.it">Email</a>
-        <a href="https://scholar.google.com/citations?user=CQ9z-CwAAAAJ&amp;hl=it&amp;oi=ao">Google Scholar</a>
-        <a href="https://orcid.org/0000-0002-1454-1284">ORCID</a>
-        <a href="https://www.linkedin.com/in/fabrizio-fusillo-4771b8a0/">LinkedIn</a>
-        <!-- To show a CV link: put the PDF in the assets folder and remove the comment marks around the next line -->
-        <!-- <a href="assets/cv-fusillo.pdf">CV</a> -->
-      </p>
-    </div>
-  </div>
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <p class="tagline">I study how <em>knowledge</em>, <em>technology</em> and <em>networks</em> shape innovation and growth.</p>
 
-  <div class="wrap">
-    <p>I am a tenure-track Assistant Professor of Economic Policy at the Department of Economics and Statistics “Cognetti de Martiis”, University of Torino, and a Collegio Carlo Alberto Affiliate. I am a fellow at BRICK, Collegio Carlo Alberto, and a deputy member of the Steering and Scientific Committee of HighEst Lab for Big Data Analytics and Artificial Intelligence.</p>
-    <p>I hold a PhD in Economics from the University of Torino and Collegio Carlo Alberto. I have been a visiting researcher at the EU Joint Research Centre, ESSEC Business School, INGENIO (CSIC-UPV), and University College Dublin.</p>
-  </div>
+  <p>I am a tenure-track Assistant Professor of Economic Policy at the Department of Economics and Statistics “Cognetti de Martiis”, University of Torino, and a Collegio Carlo Alberto Affiliate. I am a fellow at BRICK, Collegio Carlo Alberto, and a deputy member of the Steering and Scientific Committee of HighEst Lab for Big Data Analytics and Artificial Intelligence.</p>
+  <p>My research looks at the determinants and effects of knowledge, technology and networks on innovation and growth, and at how they can help territories and firms navigate the green and digital transitions. It has appeared in <em>Research Policy</em>, <em>Economic Geography</em>, <em>Economics of Innovation and New Technology</em> and <em>Eurasian Business Review</em>.</p>
+  <p>I hold a PhD in Economics from the University of Torino and Collegio Carlo Alberto. I have been a visiting researcher at the EU Joint Research Centre, ESSEC Business School, INGENIO (CSIC-UPV) and University College Dublin.</p>
 </section>
 
-<!-- ============ RESEARCH ============ -->
-<section id="research" class="lime">
-  <div class="wrap">
-    <h2>Research</h2>
-    <p>I study the determinants and effects of knowledge, technology, and networks on innovation and growth, and how they can help territories and firms navigate the green and digital transitions. My work connects technological knowledge with firms, regions, and policy, using patent data, network analysis, and spatial methods.</p>
-    <ul>
-      <li><b>Innovation and knowledge</b> – technological knowledge, innovation dynamics, firm capabilities, and the economic effects of new technologies.</li>
-      <li><b>Green and circular economy</b> – environmental technologies, circular-economy knowledge, green diversification, and sustainable transitions.</li>
-      <li><b>Economic geography</b> – regional development, spatial knowledge flows, technological diversification, and economic resilience.</li>
-      <li><b>Network analysis</b> – collaboration networks, embodied knowledge flows, and the green and digital transformation of firms and regions.</li>
-    </ul>
-  </div>
+<!-- ================= RESEARCH ================= -->
+<section id="research">
+  <h2>Research areas</h2>
+  <ul class="themes">
+    <li>
+      <h3>Innovation &amp; knowledge</h3>
+      <p>Technological knowledge, innovation dynamics, firm capabilities, and the economic effects of new technologies.</p>
+    </li>
+    <li>
+      <h3>Green &amp; circular economy</h3>
+      <p>Environmental technologies, circular-economy knowledge, green diversification, and sustainable transitions.</p>
+    </li>
+    <li>
+      <h3>Economic geography</h3>
+      <p>Regional development, spatial knowledge flows, technological diversification, and economic resilience.</p>
+    </li>
+    <li>
+      <h3>Network analysis</h3>
+      <p>Collaboration networks, embodied knowledge flows, and the green and digital transformation of firms and regions.</p>
+    </li>
+  </ul>
+  <p class="chips"><span>Patent data</span> <span>Network analysis</span> <span>Spatial methods</span></p>
 </section>
 
-<!-- ============ PUBLICATIONS ============ -->
-<!-- To add a publication: copy one <li>...</li> line, paste it at the top of the list, and change the text.
-     Keep the list to the 5 most recent: delete the last line when you add a new one. -->
-<section id="publications" class="white">
-  <div class="wrap">
-    <h2>Recent publications</h2>
-    <ol>
-      <li>Scandura, Orsatti, Quatraro, <b>Fusillo</b> &amp; Bergamini (2026). Green diversification, global knowledge sourcing and local skill composition: Evidence from the US. <em>Research Policy</em>. <a href="https://doi.org/10.1016/j.respol.2026.105434">DOI</a></li>
-      <li><b>Fusillo</b>, Montresor &amp; Fatikhova (2026). Green-tech transition beyond regional borders: The role of embodied green knowledge flows. <em>Economic Geography</em>. <a href="https://doi.org/10.1080/00130095.2025.2577307">DOI</a></li>
-      <li>Coda Zabetta, <b>Fusillo</b>, Quatraro &amp; Scandura (2025). Knowledge brokers for circular bioeconomy: Evidence from European regions. <em>Economics of Innovation and New Technology</em>. <a href="https://doi.org/10.1080/10438599.2025.2573064">DOI</a></li>
-      <li><b>Fusillo</b>, Orsatti &amp; Scandura (2025). Public green demand and green innovation: Evidence from US firms. <em>Eurasian Business Review</em>. <a href="https://doi.org/10.1007/s40821-025-00304-y">DOI</a></li>
-      <li><b>Fusillo</b>, Manera, Orsatti, Quatraro &amp; Rentocchini (2025). The exposure of EU inventive efforts to critical raw materials: Evidence from an AI-based patent indicator. <em>JRC Report, European Commission</em>. <a href="https://publications.jrc.ec.europa.eu/repository/handle/JRC141261">Link</a></li>
-    </ol>
-    <p>The full list of publications and working papers is on <a href="https://scholar.google.com/citations?user=CQ9z-CwAAAAJ&amp;hl=it&amp;oi=ao">Google Scholar</a>.</p>
-  </div>
+<!-- ================= PUBLICATIONS ================= -->
+<!-- To add a publication: copy a whole <li> ... </li> block, paste it at the top of the list
+     and change the text. Delete the last block so the list keeps the 5 most recent. -->
+<section id="publications">
+  <h2>Recent publications <a href="https://scholar.google.com/citations?user=CQ9z-CwAAAAJ&amp;hl=it&amp;oi=ao">All on Google Scholar →</a></h2>
+  <ul class="entries">
+    <li>
+      <span>2026</span>
+      <div>
+        <h3>Green diversification, global knowledge sourcing and local skill composition: Evidence from the US</h3>
+        <p>Scandura, Orsatti, Quatraro, <b>Fusillo</b> &amp; Bergamini</p>
+        <p><em>Research Policy</em> <a href="https://doi.org/10.1016/j.respol.2026.105434">DOI</a></p>
+      </div>
+    </li>
+    <li>
+      <span>2026</span>
+      <div>
+        <h3>Green-tech transition beyond regional borders: The role of embodied green knowledge flows</h3>
+        <p><b>Fusillo</b>, Montresor &amp; Fatikhova</p>
+        <p><em>Economic Geography</em> <a href="https://doi.org/10.1080/00130095.2025.2577307">DOI</a></p>
+      </div>
+    </li>
+    <li>
+      <span>2025</span>
+      <div>
+        <h3>Knowledge brokers for circular bioeconomy: Evidence from European regions</h3>
+        <p>Coda Zabetta, <b>Fusillo</b>, Quatraro &amp; Scandura</p>
+        <p><em>Economics of Innovation and New Technology</em> <a href="https://doi.org/10.1080/10438599.2025.2573064">DOI</a></p>
+      </div>
+    </li>
+    <li>
+      <span>2025</span>
+      <div>
+        <h3>Public green demand and green innovation: Evidence from US firms</h3>
+        <p><b>Fusillo</b>, Orsatti &amp; Scandura</p>
+        <p><em>Eurasian Business Review</em> <a href="https://doi.org/10.1007/s40821-025-00304-y">DOI</a></p>
+      </div>
+    </li>
+    <li>
+      <span>2025</span>
+      <div>
+        <h3>The exposure of EU inventive efforts to critical raw materials: Evidence from an AI-based patent indicator</h3>
+        <p><b>Fusillo</b>, Manera, Orsatti, Quatraro &amp; Rentocchini</p>
+        <p><em>JRC Report, European Commission</em> <a href="https://publications.jrc.ec.europa.eu/repository/handle/JRC141261">Link</a></p>
+      </div>
+    </li>
+  </ul>
 </section>
 
-<!-- ============ TEACHING ============ -->
-<!-- To add a course: copy one <li>...</li> line and change the text. -->
-<section id="teaching" class="ink">
-  <div class="wrap">
-    <h2>Teaching</h2>
-    <p>Current courses at the University of Torino:</p>
-    <ul>
-      <li><b>Innovation Networks, Complexity and Green Technologies</b> – PhD, Innovation for the Circular Economy</li>
-      <li><b>Economics and Management of Innovation</b> – Master’s, Department of Management</li>
-      <li><b>Innovation Networks and Complexity</b> – Master’s, Economics and Statistics</li>
-      <li><b>Economics of the Digital Age</b> – Bachelor’s, Culture, Politics and Society</li>
-    </ul>
-  </div>
+<!-- ================= TEACHING ================= -->
+<!-- To add a course: copy a whole <li> ... </li> block and change the text. -->
+<section id="teaching">
+  <h2>Teaching</h2>
+  <ul class="entries">
+    <li>
+      <span>PhD</span>
+      <div>
+        <h3>Innovation Networks, Complexity and Green Technologies</h3>
+        <p>PhD in Innovation for the Circular Economy</p>
+      </div>
+    </li>
+    <li>
+      <span>Master’s</span>
+      <div>
+        <h3>Economics and Management of Innovation</h3>
+        <p>Department of Management</p>
+      </div>
+    </li>
+    <li>
+      <span>Master’s</span>
+      <div>
+        <h3>Innovation Networks and Complexity</h3>
+        <p>Economics and Statistics</p>
+      </div>
+    </li>
+    <li>
+      <span>Bachelor’s</span>
+      <div>
+        <h3>Economics of the Digital Age</h3>
+        <p>Culture, Politics and Society</p>
+      </div>
+    </li>
+  </ul>
 </section>
 
-<!-- ============ CONTACT ============ -->
-<section id="contact" class="coral">
-  <div class="wrap">
-    <h2>Contact</h2>
-    <p><a href="mailto:fabrizio.fusillo@unito.it">fabrizio.fusillo@unito.it</a></p>
-    <p>Department of Economics and Statistics “Cognetti de Martiis”<br>
-       University of Torino<br>
-       Lungo Dora Siena 100/A, 10153 Torino, Italy</p>
-  </div>
+<!-- ================= NEWS ================= -->
+<!-- To add news: copy a whole <li> ... </li> block, paste it at the top and change the text.
+     The date can be just a year or e.g. "Oct 2026". -->
+<section id="news">
+  <h2>News</h2>
+  <ul class="entries news">
+    <li>
+      <span>2026</span>
+      <div>
+        <p>Published in <em>Research Policy</em>: <a href="https://doi.org/10.1016/j.respol.2026.105434">Green diversification, global knowledge sourcing and local skill composition: Evidence from the US</a>.</p>
+      </div>
+    </li>
+    <li>
+      <span>2026</span>
+      <div>
+        <p>Published in <em>Economic Geography</em>: <a href="https://doi.org/10.1080/00130095.2025.2577307">Green-tech transition beyond regional borders</a>.</p>
+      </div>
+    </li>
+  </ul>
 </section>
-
-</main>
 
 <footer>© Fabrizio Fusillo</footer>
+
+</main>
+</div>
+
+<script>
+  // Highlights the current section in the menu while scrolling. No need to edit this.
+  const menuLinks = document.querySelectorAll('aside nav a');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        menuLinks.forEach((a) => a.classList.toggle('active', a.hash === '#' + entry.target.id));
+      }
+    });
+  }, { rootMargin: '-30% 0px -60% 0px' });
+  document.querySelectorAll('main section').forEach((s) => observer.observe(s));
+</script>
 
 </body>
 </html>
