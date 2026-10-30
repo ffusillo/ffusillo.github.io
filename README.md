@@ -29,7 +29,7 @@ There are two lists:
 
 To add a publication, copy a whole `<article class="pub"> ... </article>` block,
 paste it above the first one of the right group and change the label
-(journal · year), title, authors and link. `<b>...</b>` makes text bold,
+(journal, volume(issue) · year — use the year of the journal issue, not the online-first date), title, authors and link. `<b>...</b>` makes text bold,
 `<em>...</em>` italic. The `↗` link line is optional.
 
 In `publications.html` each block also has topic tags, e.g.
@@ -50,6 +50,10 @@ filtered (e.g. `publications.html#green`).
 
 - **Ongoing research:** in `RESEARCH`, edit the `<li>` lines; the `<span>` is the status.
 - **Courses:** in `TEACHING`, copy one `<div> ... </div>` block inside `<div class="courses">`.
+- **Latest LinkedIn post:** in the `LINKEDIN` section at the end of `index.html`.
+  On LinkedIn open the post, "..." menu → "Embed this post", copy the address inside
+  `src="..."` and paste it in the `<iframe>` line (the steps are in the comment there).
+  LinkedIn does not allow showing the latest post automatically, so repeat this for a new post.
 - **News:** in `NEWS`, copy one `<li> ... </li>` block to the top and change date and text.
 - **CV link:** put the PDF in `assets/` as `cv-fusillo.pdf`, then remove the `<!--` and
   `-->` around the CV line in the side column (in both pages).

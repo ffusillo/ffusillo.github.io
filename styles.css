@@ -93,6 +93,8 @@ section { padding: 4rem max(5vw, calc((100% - 760px) / 2)); }
 .white { background: var(--white); }
 .lime  { background: var(--lime); }
 .ink   { background: var(--ink); color: var(--white); }
+.coral { background: var(--coral); }
+.coral .eyebrow { color: var(--ink); }
 .ink a:hover { color: var(--lime); }
 
 .eyebrow,
@@ -231,6 +233,12 @@ h3.sub { margin-top: 2.5rem; font-weight: 600; }
 .news { margin: 0; padding: 0; list-style: none; }
 .news li { padding: 0.8rem 0; border-top: 1px solid var(--line); }
 .news b { display: inline-block; min-width: 5.5rem; color: var(--coral); font-size: 0.85rem; }
+
+/* ---------- LinkedIn post ---------- */
+/* The white box only appears once an <iframe> is pasted inside it. */
+.linkedin-post { max-width: 520px; margin-bottom: 1rem; background: var(--white); }
+.linkedin-post:not(:has(iframe)) { display: none; }
+.linkedin-post iframe { display: block; width: 100%; height: 560px; border: 0; }
 
 footer { padding: 1.2rem 5vw; background: var(--ink); color: rgba(255, 253, 247, 0.65); font-size: 0.8rem; }
 
